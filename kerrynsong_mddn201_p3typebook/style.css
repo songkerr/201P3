@@ -1,0 +1,664 @@
+body {
+    font-family: 'Avenir', 'Raleway', 'Helvetica', 'sans-serif';
+    font-weight: 100;
+    height: 100vh;
+}
+
+div.hidden, div.hidden1 {
+    display: none;
+}
+
+/* ======================== preloader ======================== */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.pre-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 100px auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+/* ======================== main page ======================== */
+
+div.hidden {
+    display: none;
+}
+
+#logo {
+    width: 16%;
+    display: block;
+    margin: auto;
+    padding-top: 12%;
+}
+
+#bodytext {
+    width: 44%;
+    text-align: justify;
+    text-align-last: center;
+    padding-top: 4%;
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+    padding-bottom: 2%;
+}
+
+#options {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    padding-top: 3%;
+    text-align: center;
+    font-size: 14px;
+}
+
+#options a, #options a:hover, #options a:active {
+    color: #000;
+    text-decoration: none;
+}
+
+.purchase {
+    display: inline-block;
+    margin-bottom: 1.5%;
+    width: 190px;
+    border: 1px solid #adadad;
+    border-radius: 11px;
+    padding: 0 0 0 0.1%;
+}
+
+.purchase:hover {
+    border: 1px solid black;
+}
+
+.loginlink {
+    display: inline-block;
+    width: 212px;
+    border: 1px solid #adadad;
+    border-radius: 12px;
+    padding: 0 0 0 0.1%;
+}
+
+.loginlink:hover {
+    border: 1px solid black;
+}
+
+/* ======================== login ======================== */
+
+.register {
+    display: inline-block;
+    width: 222px;
+    padding: 0 20px 0 0;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    margin: 1.5% 2% 0 0;
+    font-size: 18px;
+    color: #000;
+    border: 1px solid #adadad;
+    border-radius: 15px; 
+}
+
+.register:hover {
+    border: 1px solid black;
+}
+
+#register{
+    color: #000;
+    text-decoration: none;
+}
+
+.store {
+    display: inline-block;
+    width: 40%;
+    margin: 1.5% 0 0 2%;
+    font-size: 18px;
+}
+
+#store {
+    color: #000;
+    text-decoration: none;
+}
+
+#icon {
+    width: 100%;
+    margin: auto;
+    margin-top: 95%;
+}
+
+#back {
+    width: 8%;
+    margin: auto;
+    display: block;
+}
+
+form {
+    margin-top: 10%;
+}
+
+.input {
+    border-bottom: 1px solid black;
+    padding-top: 1%;
+    margin-bottom: 9%;
+    height: 40px;
+    width: 100%;
+    color: #adadad;
+}
+
+input[type="text"] {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    padding: 20px;
+    float: left;
+    background-color: transparent;
+    z-index: 2;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+
+input[type="password"] {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    padding: 20px;
+    background-color: transparent;
+    z-index: 2;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+
+::-webkit-input-placeholder {
+    color: #adadad;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+#login {
+    width: 82px;
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    margin-top: 2%;  
+    border: 1px solid #adadad;
+    border-radius: 14px;
+}
+
+#login:hover {
+    border: 1px solid black;
+}
+
+.password {
+    font-size: 12px;
+    color: #adadad;
+    text-decoration: none;
+}
+
+.password:link, .password:hover, .password:active, .password:visited {
+    color: #adadad;
+    text-decoration: none;
+}
+
+#password {
+    padding-top: 4%;
+}
+
+/* ======================== store ======================== */
+#store-back {
+    width: 16%;
+    margin: auto;
+    display: block;
+    padding-top: 5%;
+}
+
+#store-logo {
+    width: 100%;
+}
+
+#myCarousel {
+    position: absolute;
+    width: 33%;
+    margin: 7.5% 0 0 16%;
+}
+
+.item img {
+    width: 100%;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none !important;
+    display: inline-block;
+    position: absolute;
+    top: 45%;
+    background: none;
+	border: none;
+    color: black;
+}
+
+.carousel-control.left {
+    margin-left: -10%;
+}
+
+.carousel-control.right {
+    margin-right: -10%;
+}
+
+#title {
+    font-family: 'Futura';
+    font-weight: 100;
+}
+
+#listing {
+    display: block;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    margin-right: 29%;
+    padding-top: 7%;
+}
+
+.quantity {
+    overflow: hidden;
+    background: url("http://localhost:8888/201P3/wp-content/uploads/2017/10/arrow.png");
+    background-size: 10%;
+    background-position: 92% 50%;
+    background-repeat: no-repeat;
+}
+
+select {
+    border: 1px solid black;
+    background:transparent;
+    width: 100%;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    padding-left: 7%;
+    outline: none;
+}
+
+.cart {
+    font-size: 14px;
+    position: absolute;
+    width: 100%;
+    margin: -17% 0 0 95%;
+}
+
+.cart a {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
+.listing-text {
+    font-size: 14px;
+    position: absolute;
+    width: 175%;
+    margin-top: 35%;
+}
+
+/* ======================== register ======================== */
+
+#register-icon {
+    position: absolute;
+    margin-left: 17%;
+    width: 25%;
+    margin-top: 14.5%;
+}
+
+#register-input {
+    width: 80%;
+    position: absolute;
+    left: 0;
+    margin-left: 40%;
+    padding-top: 9.8%;
+}
+
+#registerbtn {
+    width: 92px;
+    padding: 0.1% 0% 0.1% 0.4%;
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    margin-top: 2%;  
+    border: 1px solid #adadad;
+    border-radius: 14px;
+}
+
+#registerbtn:hover { 
+    border: 1px solid black;
+}
+
+/* ======================= page select ======================== */
+
+#pageicon {
+    width: 8%;
+    display: block;
+    margin: auto;
+    padding-top: 8.5%;
+}
+
+#select-text {
+    font-size: 18px;
+    width: 40%;
+    text-align: justify;
+    text-align-last: center;
+    margin-top: 4%;
+    padding-bottom: 4%;
+}
+
+#pageselect {
+    width: 64%;
+    margin-top: -0.1%;
+    padding-bottom: 7.5%;
+}
+
+.type {
+    display: inline-block;
+    width: 72px;
+    border: 1px solid #adadad;
+    border-radius: 15px;
+    padding: 0% 0 0.1% 0.2%;
+    font-size: 18px;
+    margin-top: 1.4%;
+}
+
+.type:hover {
+    border: 1px solid black;
+}
+
+.type a, .type a:hover, .type a:active, .type a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* ======================== typed pages ======================== */
+
+#preloader2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.load-text {
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    margin-top: 27.5%
+}
+
+.logout {
+    display: inline-block;
+    width: 82px;
+    padding-right: 13.5px;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    margin: -10.4% 3% 0 0;
+    border: 1px solid #adadad;
+    border-radius: 15px; 
+    font-size: 18px;
+}
+
+.logout1 {
+    display: inline-block;
+    width: 82px;
+    padding-right: 13.5px;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    margin: -7.3% 3% 0 0;
+    border: 1px solid #adadad;
+    border-radius: 15px; 
+    font-size: 18px;
+}
+
+.logout:hover, .logout1:hover {
+    border: 1px solid black;
+}
+
+#logout {
+    color: #000;
+    text-decoration: none;
+}
+
+.scroll, .scroll:focus{
+    position: absolute;
+    width: 46%;
+    height: 55%;
+    overflow: auto;
+    display: block;
+    margin: 4% 0 0 14%;
+    text-align: justify;
+    border: 1px solid #fff;
+    padding: 2%;
+    outline: none;
+}
+
+.arialtext{
+    font-family: 'Arial';
+
+}
+.timestext{
+    font-family: 'Times New Roman';
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.boldItalic {
+    font-weight: 800;
+    font-style: italic;
+}
+
+div::-webkit-scrollbar {
+    width: 7px;
+}
+
+div::-webkit-scrollbar-thumb {
+    background: #000;  
+    border-radius: 20px;
+}
+
+#page-arrow {
+    display: block;
+    position: absolute;
+    left: 0;
+    margin: 4.1% 0 0 64.8%;
+    padding: 0;
+}
+
+#page-select, #page-select:hover {
+    position: absolute;
+    left: 0;
+    margin: 4% 0 0 66%;
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#page-nav {
+    position: absolute;
+    left: 0;
+    margin: 8% 0 0 66%;
+    width: 160px;
+    font-size: 16px;
+}
+
+.number, .number:hover {
+    margin-left: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+#p, #p:hover {
+    margin-left: -7.7px;
+    padding: 0 14px 0 0;
+    color: #000;
+    text-decoration: none;
+}
+
+.text-styles {
+    width: 192px;
+    overflow: hidden;
+    display: block;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    margin: 7% 0 0 66%;
+}
+
+#fonts {
+    -webkit-border-radius: 20px; 
+    background: url("http://localhost:8888/201P3/wp-content/uploads/2017/10/arrow.png");
+    background-size: 5.5%;
+    background-position: 92% 50%;
+    background-repeat: no-repeat;
+}
+
+#styles {
+    width: 128px;
+    margin-top: 10px;
+    -webkit-border-radius: 20px; 
+    background: url("http://localhost:8888/201P3/wp-content/uploads/2017/10/arrow.png");
+    background-size: 8.5%;
+    background-position: 88% 50%;
+    background-repeat: no-repeat;
+}
+
+.finish {
+    display: inline-block;
+    margin-left: 66%;
+    font-size: 16px;
+    margin-top: 16.5%;
+    width: 265px
+}
+
+/* #save {
+    margin-left: 16px;
+} */
+
+#save, #copy {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 0 5% 0 5%;
+    color: #000;
+    text-decoration: none;
+}
+
+/* ======================== listings ======================== */
+
+.listing {
+    float: left;
+    display: block;
+    width: 239px;
+    height: 310px;
+    margin-top: 5.2%;
+    margin-left: 10.8%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    text-align: justify;
+    border: 1px solid black;
+    padding: 1%;
+    font-size: 11px;
+}
+
+.listingTitle a, .listingTitle a:hover {
+    width: 150px;
+    float: left;
+    margin-left: -14%;
+    margin-top: 32%;
+    padding-bottom: 100px;
+    color: #000;
+    text-decoration: none;
+}
+
+/* ======================== footer ======================== */
+
+.navbar-fixed-bottom {
+    padding-bottom: 1.5%;
+    background: #fff;
+    font-size: 14px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    color: #adadad;
+    margin: 0 2% 0 2%;
+}
+
+footer a {
+    color: #adadad !important;
+    text-decoration: none !important;
+}
